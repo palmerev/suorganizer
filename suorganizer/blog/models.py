@@ -12,7 +12,7 @@ class Post(models.Model):
     text = models.TextField()
     pub_date = models.DateField('date published', auto_now_add=True)
     tags = models.ManyToManyField(Tag, related_name='blog_posts')
-    startup = models.ManyToManyField(Startup, related_name='blog_posts')
+    startups = models.ManyToManyField(Startup, related_name='blog_posts')
 
     def __str__(self):
         return "{} on {}".format(
