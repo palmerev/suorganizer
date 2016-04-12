@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import View
+from django.views.decorators.http import require_http_methods
 
 from .models import Post
 
@@ -11,6 +12,7 @@ class PostList(View):
             request, 'blog/post_list.html', {'post_list': post_list})
 
 
+@require_http_methods(['GET', 'HEAD'])
 def post_detail(request, year, month, slug):
     post = get_object_or_404(
         Post,
