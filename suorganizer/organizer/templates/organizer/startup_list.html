@@ -1,3 +1,10 @@
+{% extends parent_template|default:"organizer/base_organizer.html" %}
+
+{% block title %}
+{{ block.super }} - Startup List
+{% endblock title %}
+
+{% block content %}
 <h2>Startup List</h2>
 {% if startup_list %}
   <ul>
@@ -8,3 +15,4 @@
 {% else %}
   <p>No startups available</p>
 {% endif %}
+{% endblock content %}
