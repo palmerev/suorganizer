@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {% block title %}
+      Startup Organizer
+      {% endblock title %}
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--[if IE]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Startup Organizer</h1>
+      </header>
+      <main>
+        {% block content %}
+          This is the default content.
+        {% endblock content %}
+      </main>
+      <footer>
+        <p>
+          Based on code from
+          <a href="https://django-unleashed.com/">Django Unleashed</a>
+          &copy; 2015, by <a href="https://andrewsforge.com/">Andrew Pinkham</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
