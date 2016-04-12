@@ -1,0 +1,10 @@
+<h2>Startup List</h2>
+{% if startup_list %}
+  <ul>
+    {% for startup in startup_list %}
+      <li><a href="">{{ startup.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No startups available</p>
+{% endif %}
