@@ -13,6 +13,10 @@ def tag_detail(request, slug):
     return render(request, 'organizer/tag_detail.html', {'tag': tag})
 
 
+def tag_create(request):
+    return render(request, 'organizer/tag_form.html')
+
+
 def startup_list(request):
     return render(request, 'organizer/startup_list.html',
         {'startup_list': Startup.objects.all()})

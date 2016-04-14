@@ -1,9 +1,13 @@
 from django.conf.urls import url
 
-from .views import (tag_list, tag_detail, startup_list, startup_detail)
+from .views import (
+    tag_list, tag_detail, tag_create,
+    startup_list, startup_detail
+)
 
 urlpatterns = [
     url(r'^tag/$', tag_list, name='organizer_tag_list'),
+    url(r'^tag/create/$', tag_create, name='organizer_tag_create'),
     url(r'^tag/(?P<slug>[\w\-]+)/$', tag_detail, name='organizer_tag_detail'),
     url(r'^startup/$',
         startup_list, name='organizer_startup_list'),
